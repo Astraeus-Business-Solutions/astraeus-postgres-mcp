@@ -26,7 +26,7 @@ What it does not do: writes of any kind (no `propose_write`), subqueries, CTEs, 
 Requires Node 20 or later.
 
 ```bash
-git clone https://github.com/SarutobiSasuke8/astraeus-postgres-mcp.git
+git clone https://github.com/Astraeus-Business-Solutions/astraeus-postgres-mcp.git
 cd astraeus-postgres-mcp
 npm ci
 npm run build
