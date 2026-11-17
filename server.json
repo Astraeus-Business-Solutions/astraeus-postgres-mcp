@@ -1,0 +1,37 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Astraeus-Business-Solutions/astraeus-postgres-mcp",
+  "title": "Astraeus Governed Postgres MCP",
+  "description": "Read-only Postgres with policy allowlists, row limits, PII masking and audit logs.",
+  "repository": {
+    "url": "https://github.com/Astraeus-Business-Solutions/astraeus-postgres-mcp",
+    "source": "github"
+  },
+  "version": "0.2.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@astraeus/postgres-mcp",
+      "version": "0.2.0",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "ASTRAEUS_POLICY_PATH",
+          "description": "Path to the operator policy YAML or JSON.",
+          "isRequired": true,
+          "isSecret": false
+        },
+        {
+          "name": "DATABASE_URL",
+          "description": "Read-only database connection string for the configured policy.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

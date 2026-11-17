@@ -1,9 +1,11 @@
 {
-  "name": "astraeus-postgres-mcp",
+  "name": "@astraeus/postgres-mcp",
+  "mcpName": "io.github.Astraeus-Business-Solutions/astraeus-postgres-mcp",
   "version": "0.2.0",
   "description": "Governed, read-only Postgres MCP server with policy allowlists, row limits, PII masking and an audit log.",
   "main": "dist/index.js",
   "scripts": {
+    "prepack": "npm run build",
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
@@ -45,15 +47,17 @@
   },
   "bin": {
     "astraeus-postgres-mcp": "dist/index.js",
+    "postgres-mcp": "dist/index.js",
     "astraeus-postgres-mcp-http": "dist/http-main.js"
   },
   "files": [
     "dist",
-    "examples",
+    "examples/policy.example.yaml",
     "README.md",
     "LICENSE"
   ],
   "private": false,
+  "publishConfig": { "access": "public" },
   "engines": {
     "node": ">=20"
   },

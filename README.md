@@ -71,6 +71,28 @@ Configuration:
 
 Credentials are only ever read from the environment. `.env.example` lists the variable names with placeholder values.
 
+### npm client configuration after publication
+
+The package is pending publication. Use the source installation above until it is available.
+
+```json
+{
+  "mcpServers": {
+    "astraeus-postgres-mcp": {
+      "command": "npx",
+      "args": [
+        "--yes",
+        "@astraeus/postgres-mcp@0.2.0",
+        "--policy",
+        "/absolute/path/to/policy.yaml"
+      ]
+    }
+  }
+}
+```
+
+Supply `DATABASE_URL` from your MCP client's local secret configuration.
+
 ## Tools
 
 | Tool | What it does |
